@@ -1,37 +1,44 @@
-
 import { Factory, Shield, Users, Truck, CheckCircle, Award } from 'lucide-react';
+
+// Import Images
+import rawImg from "../image/m1.jpg";
+import qualityImg from "../image/m2.jpg";
+import sortingImg from "../image/m3.jpg";
+import processingImg from "../image/m4.avif";
+import packingImg from "../image/m5.jpg";
+import loadingImg from "../image/m6.webp";
 
 const Manufacturing = () => {
   const processes = [
     {
       title: "Raw Material Sourcing",
       description: "Direct procurement from verified farmers and suppliers",
-      image: "Sourcing"
+      image: rawImg
     },
     {
       title: "Quality Inspection",
       description: "Rigorous testing and quality checks at every stage",
-      image: "Quality"
+      image: qualityImg
     },
     {
       title: "Cleaning & Sorting",
       description: "Modern sortex machines for premium quality output",
-      image: "Sorting"
+      image: sortingImg
     },
     {
       title: "Processing & Extraction",
       description: "Traditional wood-pressing for oils and modern processing",
-      image: "Processing"
+      image: processingImg
     },
     {
       title: "Packaging",
       description: "Customized packaging as per international standards",
-      image: "Packing"
+      image: packingImg
     },
     {
       title: "Loading & Export",
       description: "Careful loading and documentation for global shipment",
-      image: "Loading"
+      image: loadingImg
     }
   ];
 
@@ -115,13 +122,8 @@ const Manufacturing = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processes.map((process, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
-                <div className="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white font-bold text-xl">{index + 1}</span>
-                    </div>
-                    <span className="text-green-800 font-semibold">{process.image}</span>
-                  </div>
+                <div className="h-48 overflow-hidden">
+                  <img src={process.image} alt={process.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">{process.title}</h3>
@@ -148,34 +150,15 @@ const Manufacturing = () => {
               <div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Our Quality Promise</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Raw Material Selection</h4>
-                      <p className="text-gray-600">Careful selection and testing of raw materials from trusted sources</p>
+                  {["Raw Material Selection","Processing Controls","Final Inspection","Documentation"].map((item,i)=>(
+                    <div key={i} className="flex items-start space-x-3">
+                      <CheckCircle className="h-6 w-6 text-green-600 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-gray-800">{item}</h4>
+                        <p className="text-gray-600">Detailed steps ensuring the highest standards of quality</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Processing Controls</h4>
-                      <p className="text-gray-600">Strict adherence to processing parameters and hygiene standards</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Final Inspection</h4>
-                      <p className="text-gray-600">Comprehensive testing before packaging and export approval</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-800">Documentation</h4>
-                      <p className="text-gray-600">Complete quality certificates and traceability records</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
               
@@ -195,7 +178,7 @@ const Manufacturing = () => {
         </div>
       </section>
 
-      {/* Photo Gallery Section */}
+      {/* Photo Gallery Section
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -206,20 +189,18 @@ const Manufacturing = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processes.map((process, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
-                <div className="h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <Factory className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                    <span className="text-gray-600 font-medium">{process.image} Process</span>
-                  </div>
+                <div className="h-64 overflow-hidden">
+                  <img src={process.image} alt={process.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-800">{process.title}</h3>
                   <p className="text-gray-600 text-center">{process.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-green-800 text-white">

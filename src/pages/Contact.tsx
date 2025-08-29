@@ -1,22 +1,20 @@
-
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Send, Building2 } from "lucide-react";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    country: '',
-    product: '',
-    quantity: '',
-    message: ''
+    name: "",
+    email: "",
+    country: "",
+    product: "",
+    quantity: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create WhatsApp message
+
     const whatsappMessage = `Hello! I'm interested in your products.
     
 Name: ${formData.name}
@@ -27,39 +25,44 @@ Quantity: ${formData.quantity}
 Message: ${formData.message}`;
 
     const phoneNumber = "917777974441";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-    
-    window.open(whatsappUrl, '_blank');
-    toast.success('Redirecting to WhatsApp...');
-    
-    // Reset form
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+    toast.success("Redirecting to WhatsApp...");
+
     setFormData({
-      name: '',
-      email: '',
-      country: '',
-      product: '',
-      quantity: '',
-      message: ''
+      name: "",
+      email: "",
+      country: "",
+      product: "",
+      quantity: "",
+      message: "",
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const products = [
-    'Coriander Seeds',
-    'Cumin Seeds',
-    'Groundnut Kernels',
-    'Turmeric',
-    'Red Chilli',
-    'Cold Pressed Oils',
-    'Fenugreek Seeds',
-    'Fennel Seeds',
-    'Other Spices'
+    "Coriander Seeds",
+    "Cumin Seeds",
+    "Groundnut Kernels",
+    "Turmeric",
+    "Red Chilli",
+    "Cold Pressed Oils",
+    "Fenugreek Seeds",
+    "Fennel Seeds",
+    "Other Spices",
   ];
 
   return (
@@ -81,11 +84,16 @@ Message: ${formData.message}`;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">Send us an Inquiry</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">
+                Send us an Inquiry
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -100,7 +108,10 @@ Message: ${formData.message}`;
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -118,7 +129,10 @@ Message: ${formData.message}`;
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="country"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Country *
                     </label>
                     <input
@@ -133,7 +147,10 @@ Message: ${formData.message}`;
                     />
                   </div>
                   <div>
-                    <label htmlFor="product" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="product"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Product Interest *
                     </label>
                     <select
@@ -146,14 +163,19 @@ Message: ${formData.message}`;
                     >
                       <option value="">Select a product</option>
                       {products.map((product, index) => (
-                        <option key={index} value={product}>{product}</option>
+                        <option key={index} value={product}>
+                          {product}
+                        </option>
                       ))}
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="quantity"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Required Quantity
                   </label>
                   <input
@@ -168,7 +190,10 @@ Message: ${formData.message}`;
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message
                   </label>
                   <textarea
@@ -194,74 +219,118 @@ Message: ${formData.message}`;
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">Get in Touch</h2>
-              
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">
+                Get in Touch
+              </h2>
+
               <div className="space-y-8">
+                {/* Office 1 */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Our Office</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Our Head Office
+                    </h3>
                     <p className="text-gray-600">
-                  A-40, 3rd floor, Sumel business park 2, <br /> Opp.vanijya bhavan, Kankariya, <br /> Ahemdabad, Gujarat, India
+                      A-40, 3rd floor, Sumel business park 2, <br /> Opp.vanijya
+                      bhavan, Kankariya, <br /> Ahmedabad, Gujarat, India
                     </p>
                   </div>
                 </div>
 
+                {/* Office 2 */}
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Manufacturing Unit
+                    </h3>
+                    <p className="text-gray-600">
+                      Morzar, Bhanvad, <br /> Devbhoomi Dwarka, Gujarat, India
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Phone</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Phone
+                    </h3>
                     <p className="text-gray-600">
-                      <a href="tel:+917777974441" className="hover:text-green-600 transition-colors">
+                      <a
+                        href="tel:+917777974441"
+                        className="hover:text-green-600 transition-colors"
+                      >
                         +91 7777974441
                       </a>
                     </p>
                   </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Email
+                    </h3>
                     <p className="text-gray-600">
-                      <a href="mailto:shreehariexpoter11@gmail.com" className="hover:text-green-600 transition-colors">
+                      <a
+                        href="mailto:shreehariexpoter11@gmail.com"
+                        className="hover:text-green-600 transition-colors"
+                      >
                         shreehariexpoter11@gmail.com
                       </a>
                     </p>
                   </div>
                 </div>
 
+                {/* Business Hours */}
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Business Hours</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                      Business Hours
+                    </h3>
                     <p className="text-gray-600">
-                      Monday - Saturday: 9:00 AM - 6:00 PM IST<br />
+                      Monday - Saturday: 9:00 AM - 6:00 PM IST
+                      <br />
                       Sunday: Available for urgent inquiries
                     </p>
                   </div>
                 </div>
               </div>
-              {/* Social Media */}
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Connect With Us</h3>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://instagram.com/themeetsagar" 
-                    className="text-gray-600 hover:text-green-600 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Instagram: @themeetsagar
-                  </a>
+
+              {/* Affiliate Companies */}
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                  Our Affiliate Companies
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+                    <Building2 className="h-8 w-8 text-green-600 mb-3" />
+                    <h4 className="text-lg font-semibold text-gray-800">
+                      Status International
+                    </h4>
+                  </div>
+                  <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+                    <Building2 className="h-8 w-8 text-green-600 mb-3" />
+                    <h4 className="text-lg font-semibold text-gray-800">
+                      Shramdeep Enterprise
+                    </h4>
+                  </div>
                 </div>
               </div>
             </div>
@@ -273,18 +342,29 @@ Message: ${formData.message}`;
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Location</h2>
-            <p className="text-lg text-gray-600">Visit us at our manufacturing facility in Gujarat</p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Our Location
+            </h2>
+            <p className="text-lg text-gray-600">
+              Visit us at our manufacturing facility in Gujarat
+            </p>
           </div>
-          
+
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
+            <a
+              href="https://maps.app.goo.gl/kYLg3ndG3gdBSfEZ8?g_st=ac"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-gray-200 h-96 rounded-lg flex items-center justify-center hover:bg-gray-300 transition"
+            >
               <div className="text-center">
-                <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 text-lg">Interactive map would be integrated here</p>
-                <p className="text-gray-500">Morzar, Bhanvad, Devbhoomi Dwarka, Gujarat, India</p>
+                <MapPin className="h-16 w-16 text-gray-600 mx-auto mb-4" />
+                <p className="text-gray-700 font-medium">View on Google Maps</p>
+                <p className="text-gray-500 text-sm">
+                  Sumel Business Park-2, Kankaria, Ahmedabad, Gujarat 380022
+                </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>

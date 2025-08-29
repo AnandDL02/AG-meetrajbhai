@@ -30,7 +30,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
-              <span>shreehariexpoter11@gmail.com</span>
+              <span>info@shreehariinternational.in</span>
             </div>
           </div>
           <div className="text-center sm:text-right text-[11px] sm:text-sm">
@@ -50,7 +50,7 @@ const Header = () => {
                 <img 
                   src={logo} 
                   alt="Shree Hari Exporter Logo" 
-                  className="w-28 sm:w-36 md:w-44 lg:w-52 xl:w-60 2xl:w-72 object-contain" 
+                  className="w-32 sm:w-36 md:w-44 lg:w-52 xl:w-60 2xl:w-72 object-contain" 
                 />
                 {/* <p className="text-[10px] sm:text-xs md:text-sm text-green-600">
                   Premium Agro Exports
