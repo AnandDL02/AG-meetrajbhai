@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Globe, Shield, Truck, Users, Star, Quote } from 'lucide-react';
+import { ArrowRight, CheckCircle, Globe, Shield, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -41,21 +41,21 @@ const Home = () => {
 
   const products = [
     {
-      title: "Coriander Seeds",
+      title: "Agro commodity",
       description: "Premium Eagle & Scooter grades",
-      image:CorianderSeeds,
+      image: CorianderSeeds,
       link: "/products"
     },
     {
-      title: "Cumin Seeds",
+      title: "Fruit & Vegetables",
       description: "Europe quality specifications",
-      image: CuminSeeds ,
+      image: CuminSeeds,
       link: "/products"
     },
     {
       title: "Cold Pressed Oils",
       description: "Wood-pressed groundnut & coconut oils",
-      image:ColdPressedOils,
+      image: ColdPressedOils,
       link: "/products"
     },
     {
@@ -71,32 +71,35 @@ const Home = () => {
       name: "Ahmed Al-Rashid",
       country: "UAE",
       rating: 5,
-      text: "Excellent quality coriander seeds. Very professional service and timely delivery."
+      text: "Excellent quality coriander seeds. Very professional service and timely delivery.",
+      image: "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
       name: "Nguyen Tran",
-      country: "Vietnam", 
+      country: "Vietnam",
       rating: 5,
-      text: "Great experience working with Shree Hari International. Quality products and fair pricing."
+      text: "Great experience working with Shree Hari International. Quality products and fair pricing.",
+      image: "https://randomuser.me/api/portraits/men/45.jpg"
     },
     {
       name: "John Okafor",
       country: "Nigeria",
       rating: 5,
-      text: "Reliable supplier for our spice requirements. Highly recommended for African importers."
+      text: "Reliable supplier for our spice requirements. Highly recommended for African importers.",
+      image: "https://randomuser.me/api/portraits/men/12.jpg"
     }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
+      <section
         className="background relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-       style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
@@ -128,8 +131,8 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-foreground">Leading Agro Exports from Gujarat</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Shree Hari International is a trusted manufacturer and exporter of premium quality spices, 
-            seeds, and cold-pressed oils. With our own processing unit and direct farm sourcing, 
+            Shree Hari International is a trusted manufacturer and exporter of premium quality spices,
+            seeds, and cold-pressed oils. With our own processing unit and direct farm sourcing,
             we deliver authentic Indian products to global markets.
           </p>
         </div>
@@ -158,19 +161,19 @@ const Home = () => {
           <div className="grid md:grid-cols-4 gap-8">
             {products.map((product, index) => (
               <div key={index} className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <img 
-                  src={product.image} 
+                <img
+                  src={product.image}
                   alt={product.title}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-card-foreground">{product.title}</h3>
                   <p className="text-muted-foreground mb-4">{product.description}</p>
-                  <Link 
-                    to={product.link} 
+                  <Link
+                    to={product.link}
                     className="text-primary hover:text-primary/80 font-medium inline-flex items-center group"
                   >
-                    Learn More 
+                    Learn More
                     <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
                   </Link>
                 </div>
@@ -181,7 +184,7 @@ const Home = () => {
       </section>
 
       {/* Team Section */}
-      <section 
+      <section
         className="py-16 bg-cover bg-center relative"
         style={{
           backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517022812141-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
@@ -190,7 +193,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Meet Our Leadership</h2>
           <div className="max-w-2xl mx-auto text-center">
-            <img 
+            <img
               src={img}
               alt="Meet Nileshbhai Piprotar"
               className="w-32 h-32 rounded-full mx-auto mb-6 object-cover  border-4 border-primary"
@@ -198,8 +201,8 @@ const Home = () => {
             <h3 className="text-2xl font-semibold mb-2 text-white">Meet Nileshbhai Piprotar</h3>
             <p className="text-primary mb-4 font-medium">Founder & CEO</p>
             <blockquote className="text-lg italic text-gray-200">
-              "Our commitment to quality and customer satisfaction has made us a trusted partner 
-              for agro exports globally. We believe in building long-term relationships through 
+              "Our commitment to quality and customer satisfaction has made us a trusted partner
+              for agro exports globally. We believe in building long-term relationships through
               transparency and excellence."
             </blockquote>
           </div>
@@ -207,57 +210,66 @@ const Home = () => {
       </section>
 
       {/* Testimonials Slider */}
-     <section className="py-16 bg-muted/30">
-  <div className="container mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-      What Our Clients Say
-    </h2>
-    <div className="max-w-4xl mx-auto">
-      <Carousel
-        plugins={[
-          Autoplay({
-            delay: 4000,
-            stopOnInteraction: false,
-          }),
-        ]}
-        className="w-full"
-      >
-        <CarouselContent>
-          {testimonials.map((testimonial, index) => (
-            <CarouselItem
-              key={index}
-              className="basis-full md:basis-1/2 lg:basis-1/3"
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+            What Our Clients Say
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="w-full"
             >
-              <div className="bg-card p-6 rounded-lg shadow-lg h-full border border-border hover:border-primary/50 transition-colors">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-primary text-xl">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-4 italic">
-                  "{testimonial.text}"
-                </p>
-                <div className="font-semibold text-card-foreground">
-                  {testimonial.name}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {testimonial.country}
-                </div>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="hidden md:flex" />
-        <CarouselNext className="hidden md:flex" />
-      </Carousel>
-    </div>
-  </div>
-</section>
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="basis-full md:basis-1/2 lg:basis-1/3"
+                  >
+                    <div className="bg-card p-6 rounded-lg shadow-lg h-full border border-border hover:border-primary/50 transition-colors flex flex-col">
+                      
+                      {/* Stars */}
+                      <div className="flex items-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-primary text-xl">★</span>
+                        ))}
+                      </div>
+
+                      {/* Testimonial text */}
+                      <p className="text-muted-foreground mb-6 italic">
+                        "{testimonial.text}"
+                      </p>
+
+                      {/* Client Info with photo */}
+                      <div className="flex items-center mt-auto">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-12 h-12 rounded-full object-cover border-2 border-primary mr-4"
+                        />
+                        <div>
+                          <div className="font-semibold text-card-foreground">{testimonial.name}</div>
+                          <div className="text-sm text-muted-foreground">{testimonial.country}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
-      <section 
+      <section
         className="py-16 bg-primary text-primary-foreground relative overflow-hidden"
         style={{
           backgroundImage: "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.8) 100%)"
@@ -267,14 +279,14 @@ const Home = () => {
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Import Journey?</h2>
           <p className="text-xl mb-8 opacity-90">Get premium quality agro products delivered globally</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-background text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-background/90 transition-colors shadow-lg"
             >
               Request Quote
             </Link>
-            <Link 
-              to="/products" 
+            <Link
+              to="/products"
               className="border-2 border-background text-background px-8 py-4 rounded-lg font-semibold hover:bg-background hover:text-foreground transition-colors"
             >
               Browse Products

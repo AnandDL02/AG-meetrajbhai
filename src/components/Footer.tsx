@@ -29,7 +29,7 @@ const Footer = () => {
                 <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
               <a
-                href="https://instagram.com/themeetsagar"
+                href="https://www.instagram.com/shreehariinternational.in?igsh=bDJ4Mm56c290Ymsy"
                 className="text-gray-400 hover:text-green-400 transition-colors"
               >
                 <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
