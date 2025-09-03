@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/carousel";
 import img from "../image/meetrajbhai.jpg.jpg"
 import bgImage from "../image/hero image .jpg"
-import CorianderSeeds from "../image/flat-lay-rice-composition.jpg"
-import CuminSeeds from "../image/top-view-variety-spices.jpg"
+import CorianderSeeds from "../image/Agro-como.jpg"
+import CuminSeeds from "../image/home-f&v.jpg"
 import ColdPressedOils from "../image/healthy-product-olive-oil (1).jpg"
-import PremiumSpices from "../image/assortment-organic-spices-around-wooden-board.jpg"
+import PremiumSpices from "../image/Premium Spices.jpg"
 
 const Home = () => {
   const features = [

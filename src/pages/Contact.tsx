@@ -289,7 +289,7 @@ Message: ${formData.message}`;
                         href="mailto:shreehariexpoter11@gmail.com"
                         className="hover:text-green-600 transition-colors"
                       >
-                        shreehariexpoter11@gmail.com
+                        info@shreehariinternational.in
                       </a>
                     </p>
                   </div>

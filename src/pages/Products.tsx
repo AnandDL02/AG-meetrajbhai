@@ -1,237 +1,163 @@
-import { ArrowRight, Package, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// ✅ All product images import
-import corianderImg from "../image/p1.jpg";
-import cuminImg from "../image/p2.jpg";
-import groundnutImg from "../image/p3.jpg";
-import coconutImg from "../image/p4.jpg";
+// ✅ Agro Commodities Images
+import corianderImg from "../image/p13.jpg";
+import cuminImg from "../image/p13.jpg";
+import groundnutImg from "../image/p13.jpg";
+import riceImg from "../image/p13.jpg";
+import wheatImg from "../image/p13.jpg";
+import maizeImg from "../image/p13.jpg";
+import soybeanImg from "../image/p13.jpg";
+import pearlMilletImg from "../image/p13.jpg";
+import chickpeasImg from "../image/p13.jpg";
 
-import turmericImg from "../image/p5.webp";
-import chilliImg from "../image/p6.webp";
-import gingerImg from "../image/p7.jpg";
-import fenugreekImg from "../image/p8.jpg";
-import fennelImg from "../image/p9.jpg";
-import mustardSeedImg from "../image/p10.webp";
+// ✅ Spices Images
+import turmericImg from "../image/p13.jpg";
+import chilliImg from "../image/p13.jpg";
+import gingerImg from "../image/p13.jpg";
+import fenugreekImg from "../image/p13.jpg";
+import fennelImg from "../image/p13.jpg";
+import mustardSeedImg from "../image/p13.jpg";
 
-import groundnutOilImg from "../image/p11.jpg";
-import coconutOilImg from "../image/p12.jpg";
+// ✅ Oils
+import groundnutOilImg from "../image/p13.jpg";
+import coconutOilImg from "../image/p13.jpg";
 import sesameOilImg from "../image/p13.jpg";
-import mustardOilImg from "../image/p14.avif";
-import castorOilImg from "../image/p15.webp";
+import mustardOilImg from "../image/p13.jpg";
+import castorOilImg from "../image/p13.jpg";
 
-// ✅ Fruits & Vegetables images (replace with real images later)
-import mangoImg from "../image/p11.jpg";
-import bananaImg from "../image/p11.jpg";
-import onionImg from "../image/p11.jpg";
-import tomatoImg from "../image/p11.jpg";
-import pomegranateImg from "../image/p11.jpg";
+// ✅ Fruits
+import mangoImg from "../image/p13.jpg";
+import bananaImg from "../image/p13.jpg";
+import pomegranateImg from "../image/p13.jpg";
+
+// ✅ Vegetables
+import onionImg from "../image/p13.jpg";
+import tomatoImg from "../image/p13.jpg";
+
+const productCategories = [
+  {
+    title: "Agro Commodities",
+    description: "Premium quality agro commodities directly sourced from trusted farmers.",
+    products: [
+      {
+        name: "Coriander Seeds",
+        image: corianderImg,
+        grades: ["Eagle Grade", "Scooter Grade"],
+        moq: "5 MT",
+        countries: "UAE, Saudi Arabia, Malaysia, USA",
+        description: "Fresh and natural coriander seeds, widely used in culinary and medicinal applications."
+      },
+      {
+        name: "Cumin Seeds",
+        image: cuminImg,
+        grades: ["Singapore Quality", "Europe Quality"],
+        moq: "5 MT",
+        countries: "Vietnam, Sri Lanka, UAE, Germany",
+        description: "High aroma cumin seeds, ideal for global food industries."
+      },
+      {
+        name: "Groundnut Kernels",
+        image: groundnutImg,
+        grades: ["Java (G/20, TJ/37)", "Bold"],
+        moq: "10 MT",
+        countries: "Indonesia, Philippines, UAE",
+        description: "Superior quality groundnut kernels rich in protein and healthy fats."
+      },
+      {
+        name: "Rice",
+        image: riceImg,
+        grades: ["Basmati", "Non-Basmati"],
+        moq: "25 MT",
+        countries: "Middle East, Africa, USA",
+        description: "Premium long grain aromatic rice varieties."
+      },
+      {
+        name: "Wheat",
+        image: wheatImg,
+        grades: ["Mill Quality"],
+        moq: "50 MT",
+        countries: "Bangladesh, Nepal, Africa",
+        description: "High quality wheat for flour and bakery products."
+      },
+      {
+        name: "Maize (Corn)",
+        image: maizeImg,
+        grades: ["Export Quality"],
+        moq: "20 MT",
+        countries: "Vietnam, UAE, Oman",
+        description: "Non-GMO yellow maize rich in nutrients."
+      },
+      {
+        name: "Soybean",
+        image: soybeanImg,
+        grades: ["Premium Quality"],
+        moq: "20 MT",
+        countries: "China, UAE, Europe",
+        description: "Nutrient rich soybeans used in oil and protein production."
+      },
+      {
+        name: "Pearl Millet (Bajra)",
+        image: pearlMilletImg,
+        grades: ["Premium Quality"],
+        moq: "20 MT",
+        countries: "Middle East, Africa",
+        description: "High fiber millet widely consumed in Asia & Africa."
+      },
+      {
+        name: "Chickpeas",
+        image: chickpeasImg,
+        grades: ["Kabuli Chickpeas", "Desi Chickpeas"],
+        moq: "10 MT",
+        countries: "Turkey, UAE, Bangladesh",
+        description: "Protein rich chickpeas for culinary and food processing."
+      },
+    ],
+  },
+  {
+    title: "Spices (Whole & Powdered)",
+    description: "Aromatic spices with authentic flavors and natural goodness.",
+    products: [
+      { name: "Turmeric", image: turmericImg, moq: "5 MT", countries: "USA, UAE, Europe", description: "Pure turmeric with high curcumin content." },
+      { name: "Red Chilli", image: chilliImg, moq: "5 MT", countries: "Vietnam, China, UAE", description: "High quality whole red chillies." },
+      { name: "Dry Ginger", image: gingerImg, moq: "5 MT", countries: "UK, UAE, Africa", description: "Sun-dried ginger roots for spice & pharma." },
+      { name: "Fenugreek Seeds", image: fenugreekImg, moq: "5 MT", countries: "USA, UAE, Malaysia", description: "Rich in aroma, widely used in pickles & curries." },
+      { name: "Fennel Seeds", image: fennelImg, moq: "5 MT", countries: "Middle East, Sri Lanka", description: "Sweet aromatic fennel seeds." },
+      { name: "Mustard Seeds", image: mustardSeedImg, moq: "5 MT", countries: "Africa, UAE, Bangladesh", description: "Fresh whole mustard seeds." },
+    ],
+  },
+  {
+    title: "Cold Pressed Oils",
+    description: "Traditional wood-pressed oils retaining natural nutrients and flavor.",
+    products: [
+      { name: "Groundnut Oil", image: groundnutOilImg, moq: "5 MT", countries: "UAE, Saudi Arabia, Africa", description: "Rich in natural antioxidants and healthy fats." },
+      { name: "Coconut Oil", image: coconutOilImg, moq: "5 MT", countries: "USA, UAE, Sri Lanka", description: "Cold pressed coconut oil with natural aroma." },
+      { name: "Sesame Oil", image: sesameOilImg, moq: "5 MT", countries: "Vietnam, UAE, Japan", description: "Rich in minerals and flavor." },
+      { name: "Mustard Oil", image: mustardOilImg, moq: "5 MT", countries: "Bangladesh, Nepal, UAE", description: "Traditional mustard oil with strong aroma." },
+      { name: "Castor Oil", image: castorOilImg, moq: "5 MT", countries: "China, USA, UAE", description: "Medicinal and industrial grade castor oil." },
+    ],
+  },
+  {
+    title: "Fresh Fruits",
+    description: "Farm-fresh fruits carefully selected for export markets.",
+    products: [
+      { name: "Mango (Kesar / Alphonso)", image: mangoImg, moq: "5 MT", countries: "UAE, USA, Europe", description: "Premium export quality Indian mangoes." },
+      { name: "Banana", image: bananaImg, moq: "10 MT", countries: "Middle East, Sri Lanka", description: "Fresh Cavendish bananas for export." },
+      { name: "Pomegranate", image: pomegranateImg, moq: "5 MT", countries: "UAE, Saudi Arabia, UK", description: "Bright red juicy pomegranates." },
+    ],
+  },
+  {
+    title: "Vegetables",
+    description: "Fresh vegetables directly sourced from farms.",
+    products: [
+      { name: "Onion", image: onionImg, moq: "20 MT", countries: "Bangladesh, Sri Lanka, UAE", description: "Fresh red onions with long shelf life." },
+      { name: "Tomato", image: tomatoImg, moq: "10 MT", countries: "UAE, Maldives, Oman", description: "Farm fresh tomatoes for daily use." },
+    ],
+  },
+];
 
 const Products = () => {
-  const productCategories = [
-    {
-      title: "Agro Commodities",
-      description:
-        "Premium quality seeds and commodities sourced directly from farms.",
-      products: [
-        {
-          name: "Coriander Seeds",
-          grades: ["Eagle Grade", "Scooter Grade"],
-          moq: "1 MT",
-          countries: "Middle East, Europe, Africa",
-          description:
-            "Premium quality coriander seeds with excellent aroma and taste.",
-          image: corianderImg,
-        },
-        {
-          name: "Cumin Seeds",
-          grades: ["Europe Quality", "Premium Grade"],
-          moq: "1 MT",
-          countries: "Europe, Middle East, Vietnam",
-          description:
-            "Superior quality cumin seeds meeting international standards.",
-          image: cuminImg,
-        },
-        {
-          name: "Groundnut Kernels",
-          grades: ["Java Quality", "Bold Size"],
-          moq: "5 MT",
-          countries: "Middle East, Africa, Vietnam",
-          description:
-            "Fresh and nutritious groundnut kernels with excellent shelf life.",
-          image: groundnutImg,
-        },
-        {
-          name: "Tender Coconuts",
-          grades: ["Fresh Export Quality"],
-          moq: "1 Container",
-          countries: "Middle East, Europe",
-          description: "Fresh tender coconuts packed with natural goodness.",
-          image: coconutImg,
-        },
-      ],
-    },
-    {
-      title: "Spices (Whole & Powdered)",
-      description: "Aromatic spices with authentic flavors and natural goodness.",
-      products: [
-        {
-          name: "Turmeric",
-          grades: ["Fingers", "Powder", "Curcumin Rich"],
-          moq: "1 MT",
-          countries: "Global Export",
-          description:
-            "High curcumin content turmeric with vibrant color and aroma.",
-          image: turmericImg,
-        },
-        {
-          name: "Red Chilli",
-          grades: ["Teja", "Sannam", "Powder"],
-          moq: "1 MT",
-          countries: "Middle East, Africa, Europe",
-          description:
-            "Premium quality red chillies with optimal heat and color.",
-          image: chilliImg,
-        },
-        {
-          name: "Dry Ginger",
-          grades: ["Premium Whole", "Powder"],
-          moq: "500 KG",
-          countries: "Global Export",
-          description:
-            "Sun-dried ginger with intense flavor and medicinal properties.",
-          image: gingerImg,
-        },
-        {
-          name: "Fenugreek Seeds",
-          grades: ["Machine Clean", "Sortex Clean"],
-          moq: "1 MT",
-          countries: "Middle East, Europe",
-          description:
-            "High-quality fenugreek seeds with excellent germination rate.",
-          image: fenugreekImg,
-        },
-        {
-          name: "Fennel Seeds",
-          grades: ["Premium Quality", "Export Grade"],
-          moq: "1 MT",
-          countries: "Global Export",
-          description: "Sweet and aromatic fennel seeds with natural freshness.",
-          image: fennelImg,
-        },
-        {
-          name: "Mustard Seeds",
-          grades: ["Black", "Yellow", "Brown"],
-          moq: "1 MT",
-          countries: "Europe, Middle East",
-          description: "Premium mustard seeds with high oil content.",
-          image: mustardSeedImg,
-        },
-      ],
-    },
-    {
-      title: "Cold Pressed Oils",
-      description:
-        "Traditional wood-pressed oils retaining natural nutrients and flavor.",
-      products: [
-        {
-          name: "Groundnut Oil",
-          grades: ["Wood Pressed", "Filtered"],
-          moq: "500 Liters",
-          countries: "Global Export",
-          description:
-            "Traditional wood-pressed groundnut oil with natural aroma.",
-          image: groundnutOilImg,
-        },
-        {
-          name: "Coconut Oil",
-          grades: ["Virgin", "Cold Pressed"],
-          moq: "500 Liters",
-          countries: "Middle East, Europe, Africa",
-          description: "Pure virgin coconut oil with natural coconut fragrance.",
-          image: coconutOilImg,
-        },
-        {
-          name: "Sesame Oil",
-          grades: ["Cold Pressed", "Premium"],
-          moq: "500 Liters",
-          countries: "Global Export",
-          description: "Nutrient-rich sesame oil with authentic taste.",
-          image: sesameOilImg,
-        },
-        {
-          name: "Mustard Oil",
-          grades: ["Cold Pressed", "Filtered"],
-          moq: "500 Liters",
-          countries: "Europe, Middle East",
-          description: "Traditional mustard oil with natural pungency.",
-          image: mustardOilImg,
-        },
-        {
-          name: "Castor Oil",
-          grades: ["Commercial", "Pharmaceutical"],
-          moq: "1000 Liters",
-          countries: "Global Export",
-          description:
-            "High-quality castor oil for various industrial applications.",
-          image: castorOilImg,
-        },
-      ],
-    },
-    {
-      title: "Fresh Fruits & Vegetables",
-      description:
-        "Farm-fresh fruits and vegetables, carefully selected for export markets.",
-      products: [
-        {
-          name: "Mango (Kesar / Alphonso)",
-          grades: ["Export Quality", "Farm Fresh"],
-          moq: "1 MT",
-          countries: "Middle East, Europe, Asia",
-          description:
-            "Naturally ripened mangoes with unmatched sweetness and aroma.",
-          image: mangoImg,
-        },
-        {
-          name: "Banana",
-          grades: ["Cavendish Premium"],
-          moq: "1 Container",
-          countries: "Middle East, Africa",
-          description:
-            "Fresh and long shelf-life bananas, perfect for export packaging.",
-          image: bananaImg,
-        },
-        {
-          name: "Onion",
-          grades: ["Red Onion", "White Onion"],
-          moq: "5 MT",
-          countries: "Global Export",
-          description:
-            "High-quality onions with strong flavor and longer shelf life.",
-          image: onionImg,
-        },
-        {
-          name: "Tomato",
-          grades: ["Fresh Export Grade"],
-          moq: "2 MT",
-          countries: "Middle East, Europe",
-          description:
-            "Bright red, juicy tomatoes packed with natural nutrients.",
-          image: tomatoImg,
-        },
-        {
-          name: "Pomegranate",
-          grades: ["Bhagwa Variety"],
-          moq: "1 MT",
-          countries: "Middle East, Asia",
-          description:
-            "Sweet, seed-rich pomegranates with excellent shelf stability.",
-          image: pomegranateImg,
-        },
-      ],
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -242,38 +168,33 @@ const Products = () => {
             Our Products
           </h1>
           <p className="text-lg md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Premium quality agro commodities, spices, oils, fruits and
-            vegetables — trusted worldwide.
+            Premium quality agro commodities, spices, oils, fruits and vegetables — trusted worldwide.
           </p>
         </div>
       </section>
 
       {/* Product Categories */}
-      {productCategories.map((category, categoryIndex) => (
+      {productCategories.map((category, index) => (
         <section
-          key={categoryIndex}
-          className={`py-20 ${
-            categoryIndex % 2 === 0 ? "bg-gray-50" : "bg-white"
-          }`}
+          key={index}
+          className={`py-20 ${index % 2 === 0 ? "bg-gray-50" : "bg-white"}`}
         >
           <div className="container mx-auto px-4">
+            {/* Category Title */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">
-                {category.title}
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                {category.description}
-              </p>
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">{category.title}</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">{category.description}</p>
             </div>
 
+            {/* Products Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {category.products.map((product, productIndex) => (
+              {category.products.map((product, idx) => (
                 <div
-                  key={productIndex}
+                  key={idx}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
                 >
-                  {/* Image */}
-                  <div className="h-60 w-full overflow-hidden">
+                  {/* Product Image */}
+                  <div className="h-56 w-full overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -281,24 +202,17 @@ const Products = () => {
                     />
                   </div>
 
-                  {/* Content */}
+                  {/* Product Details */}
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-gray-600 mb-4 flex-grow">
-                      {product.description}
-                    </p>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-2">{product.name}</h3>
 
-                    <div className="space-y-3 text-sm">
-                      <div>
-                        <span className="font-semibold text-gray-700">
-                          Available Grades:
-                        </span>
+                    {product.grades && (
+                      <div className="mb-3">
+                        <span className="font-semibold text-gray-700">Grades:</span>
                         <div className="flex flex-wrap gap-2 mt-2">
-                          {product.grades.map((grade, gradeIndex) => (
+                          {product.grades.map((grade, gIdx) => (
                             <span
-                              key={gradeIndex}
+                              key={gIdx}
                               className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium"
                             >
                               {grade}
@@ -306,25 +220,19 @@ const Products = () => {
                           ))}
                         </div>
                       </div>
+                    )}
 
-                      <div className="flex items-center space-x-2">
-                        <Package className="h-4 w-4 text-green-600" />
-                        <span className="text-gray-700">
-                          MOQ: {product.moq}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center space-x-2">
-                        <Globe className="h-4 w-4 text-green-600" />
-                        <span className="text-gray-700">
-                          {product.countries}
-                        </span>
-                      </div>
-                    </div>
+                    <p className="text-gray-600 text-sm mb-2">{product.description}</p>
+                    <p className="text-sm text-gray-500">
+                      <strong>MOQ:</strong> {product.moq}
+                    </p>
+                    <p className="text-sm text-gray-500 mb-4">
+                      <strong>Exported To:</strong> {product.countries}
+                    </p>
 
                     <Link
                       to="/contact"
-                      className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2"
+                      className="mt-auto w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2"
                     >
                       <span>Request Quote</span>
                       <ArrowRight className="h-4 w-4" />
@@ -340,12 +248,9 @@ const Products = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-green-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Place Your Order?
-          </h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Place Your Order?</h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Contact us today for competitive pricing, samples, and detailed
-            product specifications.
+            Contact us today for competitive pricing, samples, and detailed product specifications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -355,10 +260,10 @@ const Products = () => {
               Get Quote Now
             </Link>
             <a
-              href="mailto:shreehariexpoter11@gmail.com"
+              href="mailto:info@shreehariinternational.in"
               className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 transform hover:scale-105"
             >
-              Email Us
+              info@shreehariinternational.in
             </a>
           </div>
         </div>

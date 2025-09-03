@@ -2,11 +2,20 @@ import { Users, Target, Heart, Award, CheckCircle } from 'lucide-react';
 import img1 from "../image/meetrajbhai.jpg.jpg"
 import img2 from "../image/export-manejar.jpg"
 import img3 from "../image/s1.jpg"
+import img4 from "../image/s2.jpg"
+import img5 from "../image/s3.jpg"
+import img6 from "../image/s4.jpg"
+import logo1 from "../image/l1.webp"
+import logo2 from "../image/l2.jpg"
+import logo3 from "../image/l3.jpg"
+import logo4 from "../image/l4.png"
+import logo5 from "../image/l5.png"
+import logo6 from "../image/l6.jpg"
 
 const About = () => {
   const team = [
     {
-      name: "Meet Nileshbhai Piprotar",
+      name: "Mr. Meet Nilesh Piprotar",
       role: "Founder & CEO",
       description: "Visionary leader with extensive experience in agro exports and business development.",
       image: img1
@@ -14,26 +23,32 @@ const About = () => {
     {
       name: "Mr. Janak Kalotra",
       role: "International Trade Manager",
-      description: "Manages global client relationships and export documentation processes.",
+      description: "Handles global trade operations, export documentation and international client relations.",
       image: img2
     },
     {
-      name: "Nilesh Bhai Piprotar",
-      role: "Procurement & Quality Head",
-      description: "Ensures premium quality sourcing directly from farms and suppliers.",
+      name: " Mr. Nilesh Piprotar",
+      role: "Purchase & Sourcing Manager",
+      description: "Leads procurement strategy and ensures best quality products are sourced directly from farmers.",
       image: img3
     },
     {
-      name: "Ms. Priya Shah",
-      role: "Finance & Compliance Head",
-      description: "Oversees financial planning, compliance, and ensures smooth export operations.",
-      image: "https://randomuser.me/api/portraits/women/65.jpg"
+      name: " Mr. Chirag ",
+      role: "Quality Control & Compliance Head",
+      description: "Oversees quality standards, certifications and ensures smooth export operations.",
+      image: img4
     },
     {
-      name: "Mr. Rahul Desai",
-      role: "Logistics & Operations Manager",
-      description: "Responsible for supply chain management and timely global delivery.",
-      image: "https://randomuser.me/api/portraits/men/85.jpg"
+      name: "Mr. Devesh Nain",
+      role: "Sales & Marketing Executive",
+      description: "Responsible for sales growth, customer acquisition and maintaining strong client relationships.",
+      image: img5
+    },
+    {
+      name: "Mr. Harsh Kodavla",
+      role: "Finance & Accounts Manager",
+      description: "Manages financial planning, accounts and ensures transparency in transactions.",
+      image: img6
     }
   ];
 
@@ -68,17 +83,16 @@ const About = () => {
   ];
 
   const foodCertifications = [
-    { name: "FDA", image: "/certificates/fda.png" },
-    { name: "Halal", image: "/certificates/halal.png" },
-    { name: "Kosher", image: "/certificates/kosher.png" },
-    { name: "IFS", image: "/certificates/ifs.png" },
-    { name: "India Organic", image: "/certificates/india-organic.png" },
-    { name: "USDA Organic", image: "/certificates/usda.png" },
+    { name: "FDA", image:logo1},
+    { name: "Halal", image:logo2},
+    { name: "Kosher", image:logo3},
+    { name: "IFS", image: logo4},
+    { name: "India Organic",image:logo5},
+    { name: "USDA Organic", image:logo6},
   ];
 
   return (
     <div className="min-h-screen">
-      
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>
@@ -103,7 +117,7 @@ const About = () => {
                 Shree Hari International has emerged as a trusted name in agro exports.
               </p>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Based in Morzar, Bhanvad, Devbhoomi Dwarka, Gujarat, we leverage our strategic location and 
+                Based in Gujarat, we leverage our strategic location and 
                 deep-rooted connections with local farmers to source the finest quality products.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -149,25 +163,41 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Team</h2>
-          <p className="text-xl text-gray-600 mb-12">Dedicated professionals committed to excellence</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {team.map((member, i) => (
-              <div key={i} className="bg-gray-50 rounded-xl p-8 shadow hover:shadow-2xl transition transform hover:-translate-y-2">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-green-500">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
-                <p className="text-green-600 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 text-sm">{member.description}</p>
-              </div>
-            ))}
+<section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Team</h2>
+    <p className="text-lg text-gray-600 mb-12">
+      Meet the professionals driving our vision forward
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      {team.map((member, i) => (
+        <div
+          key={i}
+          className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition transform hover:-translate-y-3 p-8"
+        >
+          {/* Profile Image */}
+          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-green-500 shadow-lg mb-6">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover"
+            />
           </div>
+
+          {/* Name & Role */}
+          <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
+          <p className="text-green-600 font-medium mb-3">{member.role}</p>
+
+          {/* Description */}
+          <p className="text-gray-600 text-sm leading-relaxed">
+            {member.description}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Core Values */}
       <section className="py-20 bg-gradient-to-br from-green-50 to-green-100">
