@@ -1,12 +1,12 @@
 import { Factory, Shield, Users, Truck, CheckCircle, Award } from 'lucide-react';
 
 // Import Images
-import rawImg from "../image/rowmtariyal.jpg";
+import rawImg from "../image/row.jpg";
 import qualityImg from "../image/m2.jpg";
 import sortingImg from "../image/m3.jpg";
 import processingImg from "../image/m4.avif";
 import packingImg from "../image/m5.jpg";
-import loadingImg from "../image/exp1.jpg";
+import loadingImg from "../image/container.jpg";
 
 const Manufacturing = () => {
   const processes = [
