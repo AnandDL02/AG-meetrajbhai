@@ -2,39 +2,39 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // ✅ Agro Commodities Images
-import corianderImg from "../image/p13.jpg";
-import cuminImg from "../image/p13.jpg";
-import groundnutImg from "../image/p13.jpg";
-import riceImg from "../image/p13.jpg";
-import wheatImg from "../image/p13.jpg";
-import maizeImg from "../image/p13.jpg";
-import soybeanImg from "../image/p13.jpg";
-import pearlMilletImg from "../image/p13.jpg";
-import chickpeasImg from "../image/p13.jpg";
+import corianderImg from "../image/ap1.jpg";
+import cuminImg from "../image/ap2.jpg";
+import groundnutImg from "../image/ap3.jpg";
+import riceImg from "../image/ap4.jpg";
+import wheatImg from "../image/ap5.jpg";
+import maizeImg from "../image/ap6.jpg";
+import soybeanImg from "../image/ap7.jpg";
+import pearlMilletImg from "../image/ap8.jpg";
+import chickpeasImg from "../image/ap9.avif";
 
 // ✅ Spices Images
-import turmericImg from "../image/p13.jpg";
-import chilliImg from "../image/p13.jpg";
-import gingerImg from "../image/p13.jpg";
-import fenugreekImg from "../image/p13.jpg";
-import fennelImg from "../image/p13.jpg";
-import mustardSeedImg from "../image/p13.jpg";
+import turmericImg from "../image/ap10.jpg";
+import chilliImg from "../image/ap11.jpg";
+import gingerImg from "../image/ap12.webp";
+import fenugreekImg from "../image/ap13.jpg";
+import fennelImg from "../image/ap14.webp";
+import mustardSeedImg from "../image/ap15.jpg";
 
 // ✅ Oils
-import groundnutOilImg from "../image/p13.jpg";
-import coconutOilImg from "../image/p13.jpg";
-import sesameOilImg from "../image/p13.jpg";
-import mustardOilImg from "../image/p13.jpg";
-import castorOilImg from "../image/p13.jpg";
+import groundnutOilImg from "../image/ap16.jpg";
+import coconutOilImg from "../image/ap17.jpg";
+import sesameOilImg from "../image/ap18.webp";
+import mustardOilImg from "../image/ap19.jpg";
+import castorOilImg from "../image/ap20.webp";
 
 // ✅ Fruits
-import mangoImg from "../image/p13.jpg";
-import bananaImg from "../image/p13.jpg";
-import pomegranateImg from "../image/p13.jpg";
+import mangoImg from "../image/ap21.webp";
+import bananaImg from "../image/ap22.jpg";
+import pomegranateImg from "../image/ap23.jpg";
 
 // ✅ Vegetables
-import onionImg from "../image/p13.jpg";
-import tomatoImg from "../image/p13.jpg";
+import onionImg from "../image/ap24.webp";
+import tomatoImg from "../image/ap25.jpg";
 
 const productCategories = [
   {

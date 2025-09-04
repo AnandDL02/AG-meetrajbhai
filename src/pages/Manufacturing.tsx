@@ -1,12 +1,12 @@
 import { Factory, Shield, Users, Truck, CheckCircle, Award } from 'lucide-react';
 
 // Import Images
-import rawImg from "../image/m1.jpg";
+import rawImg from "../image/rowmtariyal.jpg";
 import qualityImg from "../image/m2.jpg";
 import sortingImg from "../image/m3.jpg";
 import processingImg from "../image/m4.avif";
 import packingImg from "../image/m5.jpg";
-import loadingImg from "../image/m6.webp";
+import loadingImg from "../image/exp1.jpg";
 
 const Manufacturing = () => {
   const processes = [
@@ -123,7 +123,7 @@ const Manufacturing = () => {
             {processes.map((process, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
                 <div className="h-48 overflow-hidden">
-                  <img src={process.image} alt={process.title} className="w-full h-full object-cover" />
+                  <img src={process.image} alt={process.title} className="w-full h-full object-center " />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-3">{process.title}</h3>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send, Building2 } from "lucide-react";
 import { toast } from "sonner";
+  import { Globe, Factory } from "lucide-react"; 
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -314,25 +315,32 @@ Message: ${formData.message}`;
               </div>
 
               {/* Affiliate Companies */}
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                  Our Affiliate Companies
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
-                    <Building2 className="h-8 w-8 text-green-600 mb-3" />
-                    <h4 className="text-lg font-semibold text-gray-800">
-                      Status International
-                    </h4>
-                  </div>
-                  <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
-                    <Building2 className="h-8 w-8 text-green-600 mb-3" />
-                    <h4 className="text-lg font-semibold text-gray-800">
-                      Shramdeep Enterprise
-                    </h4>
-                  </div>
-                </div>
-              </div>
+            
+
+<div className="mt-12">
+  <h3 className="text-2xl font-bold text-gray-800 mb-6">
+    Our Affiliate Companies
+  </h3>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-3">
+        <Globe className="h-8 w-8 text-green-600" />
+      </div>
+      <h4 className="text-lg font-semibold text-gray-800">
+        Status International
+      </h4>
+    </div>
+    <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-3">
+        <Factory className="h-8 w-8 text-green-600" />
+      </div>
+      <h4 className="text-lg font-semibold text-gray-800">
+        Shramdeep Enterprise
+      </h4>
+    </div>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
