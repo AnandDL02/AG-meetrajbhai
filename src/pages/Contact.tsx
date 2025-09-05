@@ -251,7 +251,11 @@ Message: ${formData.message}`;
                       Manufacturing Unit
                     </h3>
                     <p className="text-gray-600">
-                      Morzar, Bhanvad, <br /> Devbhoomi Dwarka, Gujarat, India
+                     (1) -  Kokli Rd,Upleta 360490 , Gujarat
+                    </p>
+                    
+                    <p className="text-gray-600">
+                     (2) -  Station Road,Bhanvad 360510,Gujarat, India
                     </p>
                   </div>
                 </div>

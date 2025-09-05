@@ -2,23 +2,25 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // ✅ Agro Commodities Images
-import corianderImg from "../image/ap1.jpg";
+import corianderImg from "../image/c.jpg";
 import cuminImg from "../image/ap2.jpg";
 import groundnutImg from "../image/ap3.jpg";
-import riceImg from "../image/ap4.jpg";
-import wheatImg from "../image/ap5.jpg";
+import riceImg from "../image/r.jpg";
+import wheatImg from "../image/w.jpg";
 import maizeImg from "../image/ap6.jpg";
-import soybeanImg from "../image/ap7.jpg";
-import pearlMilletImg from "../image/ap8.jpg";
+import soybeanImg from "../image/s.jpg";
+import pearlMilletImg from "../image/b.jpg";
 import chickpeasImg from "../image/ap9.avif";
 
 // ✅ Spices Images
-import turmericImg from "../image/ap10.jpg";
-import chilliImg from "../image/ap11.jpg";
-import gingerImg from "../image/ap12.webp";
+import turmericImg from "../image/h.png";
 import fenugreekImg from "../image/ap13.jpg";
-import fennelImg from "../image/ap14.webp";
-import mustardSeedImg from "../image/ap15.jpg";
+import fennelImg from "../image/sn.png";
+import mustardSeedImg from "../image/bl.png";
+import chilliImg from "../image/ap11.jpg";
+import cardamomImg from "../image/c.png";
+import blackPepperImg from "../image/p.png";
+import garlicImg from "../image/g.png";
 
 // ✅ Oils
 import groundnutOilImg from "../image/ap16.jpg";
@@ -119,12 +121,56 @@ const productCategories = [
     title: "Spices (Whole & Powdered)",
     description: "Aromatic spices with authentic flavors and natural goodness.",
     products: [
-      { name: "Turmeric", image: turmericImg, moq: "5 MT", countries: "USA, UAE, Europe", description: "Pure turmeric with high curcumin content." },
-      { name: "Red Chilli", image: chilliImg, moq: "5 MT", countries: "Vietnam, China, UAE", description: "High quality whole red chillies." },
-      { name: "Dry Ginger", image: gingerImg, moq: "5 MT", countries: "UK, UAE, Africa", description: "Sun-dried ginger roots for spice & pharma." },
-      { name: "Fenugreek Seeds", image: fenugreekImg, moq: "5 MT", countries: "USA, UAE, Malaysia", description: "Rich in aroma, widely used in pickles & curries." },
-      { name: "Fennel Seeds", image: fennelImg, moq: "5 MT", countries: "Middle East, Sri Lanka", description: "Sweet aromatic fennel seeds." },
-      { name: "Mustard Seeds", image: mustardSeedImg, moq: "5 MT", countries: "Africa, UAE, Bangladesh", description: "Fresh whole mustard seeds." },
+      { 
+        name: "Turmeric (Haldi)", 
+        image: turmericImg, 
+        moq: "5 MT", 
+        countries: "USA, UAE, Europe", 
+        description: "High-curcumin turmeric available in whole fingers and fine powder." 
+      },
+      { 
+        name: "Cardamom (Elaichi)", 
+        image: cardamomImg, 
+        moq: "2 MT", 
+        countries: "Middle East, USA, UK", 
+        description: "Green cardamom pods with strong aroma, ideal for food and beverages." 
+      },
+      { 
+        name: "Black Pepper", 
+        image: blackPepperImg, 
+        moq: "3 MT", 
+        countries: "Vietnam, Europe, USA", 
+        description: "Whole & powdered black pepper with sharp flavor." 
+      },
+      { 
+        name: "Fenugreek Seeds (Methi)", 
+        image: fenugreekImg, 
+        moq: "5 MT", 
+        countries: "USA, UAE, Malaysia", 
+        description: "Natural fenugreek seeds and powder, widely used in pickles & curries." 
+      },
+     
+      { 
+        name: "Garlic (Dry & Powder)", 
+        image: garlicImg, 
+        moq: "10 MT", 
+        countries: "Sri Lanka, UAE, Bangladesh", 
+        description: "High quality dry garlic cloves and garlic powder for culinary & medicinal use." 
+      },
+      { 
+        name: "Mustard Seeds", 
+        image: mustardSeedImg, 
+        moq: "5 MT", 
+        countries: "Africa, UAE, Bangladesh", 
+        description: "Fresh whole mustard seeds available in yellow & black varieties." 
+      },
+      { 
+        name: "Fennel Seeds (Saunf)", 
+        image: fennelImg, 
+        moq: "5 MT", 
+        countries: "Middle East, Sri Lanka", 
+        description: "Sweet aromatic fennel seeds and fennel powder." 
+      },
     ],
   },
   {
@@ -151,6 +197,7 @@ const productCategories = [
     title: "Vegetables",
     description: "Fresh vegetables directly sourced from farms.",
     products: [
+      { name: "Red Chilli", image: chilliImg, moq: "5 MT", countries: "Vietnam, China, UAE", description: "High quality whole red chillies." },
       { name: "Onion", image: onionImg, moq: "20 MT", countries: "Bangladesh, Sri Lanka, UAE", description: "Fresh red onions with long shelf life." },
       { name: "Tomato", image: tomatoImg, moq: "10 MT", countries: "UAE, Maldives, Oman", description: "Farm fresh tomatoes for daily use." },
     ],

@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-import img from "../image/meetrajbhai.jpg.jpg"
+import img from "../image/owener.jpg"
 import bgImage from "../image/hero image .jpg"
 import CorianderSeeds from "../image/Agro-como.jpg"
 import CuminSeeds from "../image/home-f&v.jpg"
