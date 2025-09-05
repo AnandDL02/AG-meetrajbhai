@@ -17,10 +17,10 @@ import turmericImg from "../image/h.png";
 import fenugreekImg from "../image/ap13.jpg";
 import fennelImg from "../image/sn.png";
 import mustardSeedImg from "../image/bl.png";
-import chilliImg from "../image/ap11.jpg";
+import chilliImg from "../image/g.png";
 import cardamomImg from "../image/c.png";
 import blackPepperImg from "../image/p.png";
-import garlicImg from "../image/g.png";
+import garlicImg from "../image/gp.png";
 
 // ✅ Oils
 import groundnutOilImg from "../image/ap16.jpg";
@@ -121,6 +121,13 @@ const productCategories = [
     title: "Spices (Whole & Powdered)",
     description: "Aromatic spices with authentic flavors and natural goodness.",
     products: [
+      { 
+        name: "Red Chilli (Whole & Powder)", 
+        image: chilliImg, 
+        moq: "5 MT", 
+        countries: "Vietnam, China, UAE, Malaysia", 
+        description: "Premium quality red chilli in whole pods and powder form with strong pungency." 
+      },
       { 
         name: "Turmeric (Haldi)", 
         image: turmericImg, 
