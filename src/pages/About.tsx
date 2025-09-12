@@ -12,9 +12,9 @@ import logo3 from "../image/l3.jpg";
 import logo4 from "../image/l4.png";
 import logo5 from "../image/l5.png";
 import logo6 from "../image/l6.jpg";
-import i1 from "../image/1.jpg"
+import i1 from "../image/3.jpg"
 import i2 from "../image/2.jpg"
-import i3 from "../image/3.jpg"
+import i3 from "../image/1.jpg"
 
 const About = () => {
   const team = [
@@ -91,8 +91,8 @@ const About = () => {
         "Agricultural & Processed Food Products Export Development Authority",
         img : i2
     },
-    { name: "FSSAI", description: "Food Safety and Standards Authority of India", img : i3 },
-    { name: "MSME", description: "Micro, Small & Medium Enterprises Registration", img : logo4},
+    { name: "FSSAI", description: "Food Safety and Standards Authority of India", img : logo4 },
+    { name: "MSME", description: "Micro, Small & Medium Enterprises Registration", img : i3},
   ];
 
   const foodCertifications = [
