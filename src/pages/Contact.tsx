@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send, Building2 } from "lucide-react";
 import { toast } from "sonner";
-  import { Globe, Factory } from "lucide-react"; 
+import bg1 from "../image/chat1.png"
+import bg2 from "../image/chat2.png"
+import l1 from "../image/l1.jpg"
+import l2 from "../image/l2.jpg"
+import { Globe, Factory } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -235,8 +239,15 @@ Message: ${formData.message}`;
                       Our Head Office
                     </h3>
                     <p className="text-gray-600">
-                      A-40, 3rd floor, Sumel business park 2, <br /> Opp.vanijya
-                      bhavan, Kankariya, <br /> Ahmedabad, Gujarat, India
+                      (1) A-40, 3rd floor, Sumel business park 2, <br />{" "}
+                      Opp.vanijya bhavan, Kankariya, <br /> Ahmedabad, Gujarat,
+                      India
+                    </p>
+
+                    <p className="text-gray-600">
+                      (2) NEAR TELEPHONE OFFICE, TA BHANVAD, Morjhar, Devbhumi
+                      Dwarka, Gujarat, 360510 (24BHEPP2179K1Z2) shree Hari
+                      International GST Add please
                     </p>
                   </div>
                 </div>
@@ -251,11 +262,16 @@ Message: ${formData.message}`;
                       Manufacturing Unit
                     </h3>
                     <p className="text-gray-600">
-                     (1) -  Kokli Rd,Upleta 360490 , Gujarat
+                      (1) - Kokli Rd,Upleta 360490 , Gujarat
                     </p>
-                    
+
                     <p className="text-gray-600">
-                     (2) -  Station Road,Bhanvad 360510,Gujarat, India
+                      (2) - Station Road,Bhanvad 360510,Gujarat, India
+                    </p>
+                    <p className="text-gray-600 capitalize ">
+                      (3) - Kotecha Agro Industries 100/1, Paiki 1, <br /> Plot
+                      No 7, H K Industrial Area,
+                      <br /> Village Kuchiyadad, Rajkot, Gujarat, 360023
                     </p>
                   </div>
                 </div>
@@ -317,34 +333,90 @@ Message: ${formData.message}`;
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Affiliate Companies */}
-            
+      {/* Affiliate Companies */}
+      <section className="w-full py-20 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h3 className="text-3xl font-bold text-gray-800 mb-10 text-center">
+            Our Affiliate Companies
+          </h3>
 
-<div className="mt-12">
-  <h3 className="text-2xl font-bold text-gray-800 mb-6">
-    Our Affiliate Companies
-  </h3>
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
-      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-3">
-        <Globe className="h-8 w-8 text-green-600" />
-      </div>
-      <h4 className="text-lg font-semibold text-gray-800">
-        Status International
-      </h4>
-    </div>
-    <div className="p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
-      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-100 mb-3">
-        <Factory className="h-8 w-8 text-green-600" />
-      </div>
-      <h4 className="text-lg font-semibold text-gray-800">
-        Shramdeep Enterprise
-      </h4>
-    </div>
-  </div>
-</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Status International */}
+            <div
+              className="relative rounded-xl overflow-hidden shadow-lg group h-64 flex flex-col justify-start"
+              style={{
+                backgroundImage: `url(${bg1})`, // 🔹 Add your bg here
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              {/* Dark transparent overlay */}
+              <div className="absolute inset-0 bg-black/70"></div>
 
+              <div className="relative z-10 p-6 text-white">
+                {/* Logo */}
+                <img
+                  src= {l1}
+                  alt="Status International"
+                  className="h-12 mb-3"
+                />
+                {/* Title */}
+                <h4 className="text-xl font-bold">Status International</h4>
+                {/* Paragraph */}
+                <p className="text-sm mt-2 opacity-90">
+                  Status International is our trusted affiliate company, working
+                  closely with us to provide top-quality agro products across
+                  multiple global markets.
+                </p>
+                {/* GST */}
+                <p className="text-sm mt-2 font-semibold">
+                  GST: 24MFFPK0096A1ZO
+                </p>
+                <p className="text-sm mt-2 font-semibold">
+                   IEC: MFFPK0096A 
+                </p>
+              </div>
+            </div>
+            {/* Shramdeep Enterprise */}
+            <div
+              className="relative rounded-xl overflow-hidden shadow-lg group h-64 flex flex-col justify-start"
+              style={{
+                 backgroundImage: `url(${bg2})`, // 🔹 Add your bg here
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              {/* Dark transparent overlay */}
+              <div className="absolute inset-0 bg-black/70"></div>
+
+              <div className="relative z-10 p-6 text-white">
+                {/* Logo */}
+                <img
+                  src= {l2}
+                  alt="Shramdeep Enterprise"
+                  className="h-12 mb-3"
+                />
+                {/* Title */}
+                <h4 className="text-xl font-bold">Shramdeep Enterprise</h4>
+                {/* Paragraph */}
+                <p className="text-sm mt-2 opacity-90">
+                  Shramdeep Enterprise is one of our affiliate partners,
+                  supporting our mission to deliver reliable agricultural
+                  products and services globally.
+                </p>
+                {/* GST */}
+                <p className="text-sm mt-2 font-semibold">
+                  GST:  24AKWPK5364R1Z4
+                </p>
+                <p className="text-sm mt-2 font-semibold">
+                  IEC:  AKWPK5364R
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -362,8 +434,8 @@ Message: ${formData.message}`;
             </p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <a
+          <div className="bg-white h-[70vh] p-8 rounded-xl shadow-lg">
+            {/* <a
               href="https://maps.app.goo.gl/kYLg3ndG3gdBSfEZ8?g_st=ac"
               target="_blank"
               rel="noopener noreferrer"
@@ -376,7 +448,17 @@ Message: ${formData.message}`;
                   Sumel Business Park-2, Kankaria, Ahmedabad, Gujarat 380022
                 </p>
               </div>
-            </a>
+            </a> */}
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.3145517301477!2d72.60008657531344!3d23.012220079181102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85ce2f50ee17%3A0xe840717a1b442845!2sSumel%20Business%20Park%202!5e0!3m2!1sen!2sin!4v1757656519842!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Map"
+            ></iframe>
           </div>
         </div>
       </section>

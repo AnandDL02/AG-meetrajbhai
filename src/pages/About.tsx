@@ -12,6 +12,9 @@ import logo3 from "../image/l3.jpg";
 import logo4 from "../image/l4.png";
 import logo5 from "../image/l5.png";
 import logo6 from "../image/l6.jpg";
+import i1 from "../image/1.jpg"
+import i2 from "../image/2.jpg"
+import i3 from "../image/3.jpg"
 
 const About = () => {
   const team = [
@@ -81,14 +84,15 @@ const About = () => {
   ];
 
   const certifications = [
-    { name: "IEC", description: "Import Export Code Certificate" },
+    { name: "IEC", description: "Import Export Code Certificate" , img : i1 },
     {
       name: "APEDA",
       description:
         "Agricultural & Processed Food Products Export Development Authority",
+        img : i2
     },
-    { name: "FSSAI", description: "Food Safety and Standards Authority of India" },
-    { name: "MSME", description: "Micro, Small & Medium Enterprises Registration" },
+    { name: "FSSAI", description: "Food Safety and Standards Authority of India", img : i3 },
+    { name: "MSME", description: "Micro, Small & Medium Enterprises Registration", img : logo4},
   ];
 
   const foodCertifications = [
@@ -260,7 +264,8 @@ const About = () => {
                 className="bg-white/70 backdrop-blur-md p-8 rounded-xl border border-green-200 shadow hover:shadow-xl transition"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-green-600 rounded-full flex items-center justify-center">
-                  <Award className="h-8 w-8 text-white" />
+                  <img src={c.img} alt="" />
+                  
                 </div>
                 <h3 className="text-xl font-bold text-gray-800">{c.name}</h3>
                 <p className="text-gray-600 text-sm mt-2">{c.description}</p>

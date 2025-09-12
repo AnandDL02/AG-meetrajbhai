@@ -1,5 +1,10 @@
-
 import { Shield, Factory, Globe, CheckCircle, Users, Award, Truck, Clock } from 'lucide-react';
+import img1 from "../image/o3.jpg";
+import img2 from "../image/o5.jpg";
+import img3 from "../image/o6.jpg";
+import img4 from "../image/o1.jpg";
+import img5 from "../image/o2.jpg";
+import img6 from "../image/o44.jpg";
 
 const WhyChooseUs = () => {
   const reasons = [
@@ -64,59 +69,36 @@ const WhyChooseUs = () => {
     }
   ];
 
-  const certifications = [
-    {
-      icon: <Award className="h-8 w-8 text-green-600" />,
-      title: "IEC Certified",
-      description: "Import Export Code for international trade"
-    },
-    {
-      icon: <Award className="h-8 w-8 text-green-600" />,
-      title: "APEDA Registered",
-      description: "Agricultural & Processed Food Products Export"
-    },
-    {
-      icon: <Award className="h-8 w-8 text-green-600" />,
-      title: "FSSAI Certified",
-      description: "Food Safety and Standards Authority"
-    },
-    {
-      icon: <Award className="h-8 w-8 text-green-600" />,
-      title: "MSME Registered",
-      description: "Micro, Small & Medium Enterprise"
-    }
-  ];
-
   const workingProcess = [
-    {
-      step: 1,
+    { 
       title: "Inquiry & Discussion",
-      description: "Share your requirements and get detailed quotation"
+      description: "Share your requirements and get detailed quotation",
+      image: img1
     },
     {
-      step: 2,
       title: "Sample & Approval",
-      description: "Receive samples for quality verification and approval"
+      description: "Receive samples for quality verification and approval",
+      image: img2
     },
     {
-      step: 3,
       title: "Order Confirmation",
-      description: "Confirm order details and advance payment"
+      description: "Confirm order details and advance payment",
+      image: img3
     },
     {
-      step: 4,
       title: "Production & QC",
-      description: "Processing with quality checks at every stage"
+      description: "Processing with quality checks at every stage",
+      image: img4
     },
     {
-      step: 5,
       title: "Shipment & Documentation",
-      description: "Secure packaging and complete export documentation"
+      description: "Secure packaging and complete export documentation",
+      image: img5
     },
     {
-      step: 6,
       title: "Delivery & Support",
-      description: "Timely delivery with ongoing customer support"
+      description: "Timely delivery with ongoing customer support",
+      image: img6
     }
   ];
 
@@ -185,28 +167,6 @@ const WhyChooseUs = () => {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Certifications & Compliance</h2>
-            <p className="text-xl text-gray-600">Certified for quality, safety, and international standards</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center">
-                <div className="flex justify-center mb-4">
-                  {cert.icon}
-                </div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">{cert.title}</h3>
-                <p className="text-gray-600 text-sm">{cert.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Working Process */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -214,21 +174,37 @@ const WhyChooseUs = () => {
             <h2 className="text-4xl font-bold text-gray-800 mb-4">How We Work</h2>
             <p className="text-xl text-gray-600">Simple and transparent process from inquiry to delivery</p>
           </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {workingProcess.map((process, index) => (
-                <div key={index} className="relative">
-                  <div className="bg-white p-6 rounded-xl shadow-lg">
-                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-white font-bold text-lg">{process.step}</span>
+                <div key={index} className="relative group">
+                  <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    
+                    {/* Image */}
+                    <div className="w-28 h-28 mb-6 rounded-full overflow-hidden shadow-md group-hover:scale-105 transform transition duration-300">
+                      <img 
+                        src={process.image} 
+                        alt={process.title} 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-3 text-center">{process.title}</h3>
-                    <p className="text-gray-600 text-center">{process.description}</p>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">
+                      {process.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 text-center">
+                      {process.description}
+                    </p>
                   </div>
+
+                  {/* Arrow Line (Between Cards) */}
                   {index < workingProcess.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                      <div className="w-8 h-0.5 bg-green-300"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-5 transform -translate-y-1/2">
+                      <div className="w-10 h-0.5 bg-green-300"></div>
                     </div>
                   )}
                 </div>
