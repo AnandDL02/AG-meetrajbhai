@@ -15,7 +15,8 @@ import WhyChooseUs from "./pages/WhyChooseUs";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Blog from "./pages/Blog";
+import Index from "./pages/Index";
+import BlogFull from "./components/BlogFull";
 
 const queryClient = new QueryClient();
 
@@ -35,8 +36,8 @@ const App = () => (
               <Route path="/manufacturing" element={<Manufacturing />} />
               <Route path="/why-choose-us" element={<WhyChooseUs />} />
               <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/blog" element={<Blog/>} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Index/>} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
