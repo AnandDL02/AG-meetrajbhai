@@ -235,7 +235,7 @@ Message: ${formData.message}`;
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    <h3 className="text-lg  font-semibold text-gray-800 mb-2">
                       Our Head Office
                     </h3>
                     <p className="text-gray-600">
@@ -244,10 +244,9 @@ Message: ${formData.message}`;
                       India
                     </p>
 
-                    <p className="text-gray-600">
-                      (2) NEAR TELEPHONE OFFICE, TA BHANVAD, Morjhar, Devbhumi
-                      Dwarka, Gujarat, 360510 (24BHEPP2179K1Z2) shree Hari
-                      International GST Add please
+                    <p className="text-gray-600 capitalize">
+                      (2) Near Telephone Office,Ta Bhanvad,Morjhar,<br/>Devbhumi
+                      Dwarka,Gujarat,360510
                     </p>
                   </div>
                 </div>

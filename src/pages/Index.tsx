@@ -1,7 +1,7 @@
-import BlogFull from "../components/BlogFull";
+// import BlogFull from "../components/BlogFull";
 
-const Index = () => {
-  return <BlogFull/>;
-};
+// const Index = () => {
+//   return <BlogFull/>;
+// };
 
-export default Index;
+// export default Index;

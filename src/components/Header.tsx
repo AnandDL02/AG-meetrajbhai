@@ -16,7 +16,7 @@ const Header = () => {
     { name: "Why Choose Us", href: "/why-choose-us" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+    // { name: "Blog", href: "/blog" },
   ];
 
   const isActive = (path) => location.pathname === path;
